@@ -50,7 +50,7 @@ export default function WorkSection() {
         backgroundImage: "url('/images.png')",
         backgroundColor: 'rgba(226, 234, 252, 0.6)',
         backgroundBlendMode: 'multiply',
-        backgroundSize: '50%',
+        backgroundSize: '45%',
       }}
     >
       {/* Blue Overlay */}
