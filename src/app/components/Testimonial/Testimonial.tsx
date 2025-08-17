@@ -62,8 +62,8 @@ const FAQSection = () => {
           </div>
 
           {/* Right Side FAQ */}
-          <div className='lg:w-1/2 w-full px-10'>
-            <div className='space-y-4'>
+          <div className='lg:w-1/2 w-full px-10 '>
+            <div className='space-y-4 mt-10'>
               {accordionData.map((item) => (
                 <div
                   key={item.id}

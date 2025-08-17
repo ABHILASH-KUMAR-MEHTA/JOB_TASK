@@ -12,7 +12,7 @@ const Footer = () => {
           'linear-gradient(to right, #ff9966, #ff5e62, #6a11cb, #2575fc)',
       }}
     >
-      <div className='max-w-6xl mx-auto bg-white rounded-3xl shadow-lg px-8 py-10 flex flex-col md:flex-row items-center md:items-start justify-between gap-8'>
+      <div className='max-w-6xl mx-auto bg-white rounded-3xl shadow-lg  px-16 py-12 flex flex-col md:flex-row items-center md:items-start justify-between gap-8'>
         {/* Left Section */}
         <div className='flex flex-col items-center md:items-start text-center md:text-left max-w-sm'>
           {/* Logo */}

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -26,15 +27,11 @@ const ContactSection = () => {
     setStatus(null);
 
     try {
-      const res = await fetch(
-        // ⬇️ Replace this with the API endpoint from the Postman collection
-        'https://postman-echo.com/post',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
-        }
-      );
+      const res = await fetch('https://postman-echo.com/post', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
       if (!res.ok) throw new Error('Failed to submit');
 
@@ -49,13 +46,33 @@ const ContactSection = () => {
   };
 
   return (
-    <section
-      className='relative w-full'
-      style={{
-        background:
-          'linear-gradient(to right, #ff9966, #ff5e62, #6a11cb, #2575fc)',
-      }}
-    >
+    <section className='relative w-full bg-blue-500/20 overflow-hidden'>
+      {/* Decorative Background Images */}
+      <Image
+        src='/right.png'
+        alt='Left decoration'
+        width={500}
+        height={500}
+        className='absolute z-10 bottom-0 left-0 opacity-100 pointer-events-none'
+      />
+      <Image
+        src='/left.png'
+        alt='Right decoration'
+        width={250}
+        height={250}
+        className='absolute top-0 right-0 opacity-70 pointer-events-none'
+      />
+
+      {/* Gradient overlay at bottom */}
+      <div
+        className='absolute bottom-0 left-0 right-0 h-1/2'
+        style={{
+          background:
+            'linear-gradient(to right, #ff9966, #ff5e62, #6a11cb, #2575fc)',
+        }}
+      ></div>
+
+      {/* Form Section */}
       <div className='relative container mx-auto px-4 lg:px-8 flex justify-center py-20'>
         <div className='w-full max-w-lg bg-white rounded-xl p-8 shadow-lg relative z-10'>
           <h2 className='text-3xl md:text-4xl font-bold text-center mb-8 text-black'>
