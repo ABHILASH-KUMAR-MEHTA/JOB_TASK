@@ -41,6 +41,12 @@ const Features = () => {
       layout: 'bottom',
     },
     {
+      id: 6,
+      title: 'Custom Development',
+      desc: 'From concept to launch, we create stunning, user-centric websites that elevate your brand and engage your audience.',
+      icon: <FiUsers className='text-2xl text-purple-500' />,
+    },
+    {
       id: 5,
       title: 'Webflow',
       desc: 'From concept to launch, we create stunning, user-centric websites that elevate your brand and engage your audience.',
@@ -55,12 +61,6 @@ const Features = () => {
       ),
       image: image2,
       layout: 'right',
-    },
-    {
-      id: 6,
-      title: 'Custom Development',
-      desc: 'From concept to launch, we create stunning, user-centric websites that elevate your brand and engage your audience.',
-      icon: <FiUsers className='text-2xl text-purple-500' />,
     },
   ];
 
@@ -140,7 +140,7 @@ const Features = () => {
             return (
               <div
                 key={feature.id}
-                className='bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex flex-col h-full'
+                className='bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex flex-col h-full '
               >
                 <div className='w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full'>
                   {feature.icon}
